@@ -111,7 +111,7 @@
 
 .btn-outline {
   background-color: transparent;
-  border: 1px solid var(--btn-outline-border);
+  border: 1px solid #0050B3;
   color: var(--text-dark);
   
   &:hover {
@@ -186,7 +186,7 @@
    HERO SECTION
    ======================================== */
 .hero-section {
-  padding: 80px 0 100px;
+  padding: 20px 0 0px;
   background-color: var(--bg-white);
 }
 
@@ -484,7 +484,7 @@
 
 .card-blue {
   background: linear-gradient(135deg, #4A9FD8 0%, #0050B3 100%);
-  color: white;
+  color: rgb(0, 0, 0);
   
   .card-icon {
     color: white;
@@ -520,8 +520,8 @@
 }
 
 .card-text {
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 19px;
+  font-weight: 600;
   line-height: 1.5;
   margin: 0;
 }
@@ -583,6 +583,7 @@
 /* Intelligence Illustration Placeholder */
 .intelligence-illustration-placeholder {
   min-height: 450px;
+  min-width: 350px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.281) 0%, rgba(255, 255, 255, 0.05) 100%);
   border-radius: 40px;
   display: flex;
@@ -690,8 +691,11 @@
    ======================================== */
 .architecture-section {
   padding: 80px 0;
-  background: linear-gradient(135deg, #5BA3DC 0%, #4A9FD8 100%);
   color: white;
+  background-image: url('../assets/backgroung.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .architecture-heading {
@@ -721,21 +725,21 @@
 }
 
 .architecture-description {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.95);
+  color: rgba(187, 187, 187, 0.95);
   margin: 0;
 }
 
 .architecture-illustration-placeholder {
-  min-height: 400px;
+  min-height: 310px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
   border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 60px;
-  border: 2px dashed rgba(255, 255, 255, 0.3);
+  padding: 25px;
+  // border: 2px dashed rgba(255, 255, 255, 0.3);
 }
 
 .architecture-visual {
@@ -917,18 +921,19 @@
 }
 
 .outcomes-card-text {
-  font-size: 18px;
+  font-size: 24px;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.95);
   margin-bottom: 32px;
 }
 
 .btn-outcomes {
+  width: 100%;
   background: rgba(255, 255, 255, 0.2);
   color: white;
-  padding: 14px 28px;
-  font-size: 16px;
-  font-weight: 500;
+  padding: 5px 28px;
+  font-size: 20px;
+  font-weight: 600;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   cursor: pointer;
