@@ -29,7 +29,14 @@
 
       </div>
       <div class="navbar-right ">
-        <button class="btn btn-outline" data-testid="get-demo-btn">Get a demo</button>
+        <button
+          class="btn btn-outline"
+          data-testid="get-demo-btn"
+          type="button"
+          (click)="scrollToContact()"
+        >
+          Get a demo
+        </button>
         <!-- <button class="btn btn-primary" data-testid="start-trial-btn">Start your free trial</button> -->
       </div>
     </div>
@@ -74,7 +81,8 @@
           </p>
 
           <!-- CTA Button -->
-          <button class="btn btn-cta" data-testid="hero-cta-btn">
+          <button class="btn btn-cta" data-testid="hero-cta-btn" type="button"
+          (click)="scrollToContact()">
             Turn operational signals into real-time action
           </button>
         </div>
@@ -223,7 +231,8 @@
       performing even when connectivity is inconsistent.
     </p>
 
-    <button class="btn btn-cta-secondary" data-testid="reassess-btn" style="font-size: 18px;">
+    <button class="btn btn-cta-secondary" data-testid="reassess-btn" style="font-size: 18px;" type="button"
+    (click)="scrollToContact()">
       Reassess how your organization currently responds to risk
     </button>
   </div>
@@ -338,7 +347,8 @@
       </p>
     </div>
 
-    <button class="btn btn-cta-secondary" data-testid="edge-decisions-btn">
+    <button class="btn btn-cta-secondary" data-testid="edge-decisions-btn" type="button"
+    (click)="scrollToContact()">
       See why edge-first decisions matter
     </button>
   </div>
@@ -548,45 +558,150 @@
   </div>
 </section>
 
+<!-- industries section colapse -->
+<section class="industries-section-colapse">
+  <div class="container-custom">
+    <div class="predictive-wrap" data-testid="predictive-wrap">
+      <header class="predictive-header">
+        <h2 class="predictive-title">Reduce Equipment Downtime with AI-Driven<br>Predictive Maintenance</h2>
+        <p class="predictive-lead">
+          In manufacturing and industrial automation, unplanned downtime is one of the most expensive operational risks.
+          Industry studies estimate that unplanned downtime costs industrial manufacturers billions annually, with large
+          facilities losing thousands of dollars per minute during production interruptions. QubiSense applies Distributed
+          AI to detect failure signals early and convert them into timely maintenance decisions.
+        </p>
+      </header>
+
+      <h3 class="predictive-subtitle">How Predictive Maintenance Becomes an Operational Advantage</h3>
+      <p class="predictive-paragraph">
+        Machines continuously generate vibration, temperature, acoustic, and electrical signals. QubiSense captures and
+        analyzes this data at the edge, enabling real-time predictive maintenance decisions rather than waiting for
+        centralized processing delays.
+      </p>
+
+      <div class="predictive-grid">
+        <div class="predictive-col">
+          <p class="predictive-kicker">Instead of reacting to breakdowns, manufacturers gain early visibility into:</p>
+          <ul class="predictive-pills" aria-label="Early visibility signals">
+            <li class="predictive-pill">Bearing wear and imbalance detected through spectral vibration analysis</li>
+            <li class="predictive-pill">Motor overheating and electrical anomalies identified through current monitoring</li>
+            <li class="predictive-pill">Alignment drift and mechanical stress flagged before failure thresholds</li>
+            <li class="predictive-pill">Abnormal usage patterns that accelerate component degradation</li>
+          </ul>
+        </div>
+
+        <div class="predictive-col">
+          <p class="predictive-kicker">By embedding Distributed AI directly into production environments, organizations can achieve measurable improvements:</p>
+          <ul class="predictive-pills" aria-label="Measurable improvements">
+            <li class="predictive-pill">Up to 30 percent reduction in unplanned downtime</li>
+            <li class="predictive-pill">20 to 40 percent lower maintenance costs through condition-based servicing</li>
+            <li class="predictive-pill">Extended asset life by reducing unnecessary part replacements</li>
+            <li class="predictive-pill">Automated compliance documentation and maintenance logs</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="predictive-footnote">
+        Maintenance teams shift from calendar-based servicing to condition-driven action. Operations leaders gain
+        predictable production schedules and improved throughput stability.
+        <br>
+        QubiSense enables manufacturers to move from reactive repair cycles to proactive performance management,
+         delivering the competitive edge required in modern supply chains.
+      </p>
+
+      <button class="btn btn-cta predictive-cta" type="button" type="button"
+      (click)="scrollToContact()">
+        Reclaim control over downtime
+      </button>
+    </div>
+  </div>
+</section>
+
 <!-- Monitoring to Outcomes Section -->
 <section class="outcomes-section" data-testid="outcomes-section">
   <div class="container-custom">
     <div class="row">
-      <div class="col-lg-5 col-md-12">
-        <div class="outcomes-card">
-          <h2 class="outcomes-card-heading">
-            From Monitoring<br>
-            Conditions to Managing<br>
-            Outcomes
-          </h2>
+      <div class="col-lg-12 col-md-12">
+        <div class="outcomes-card ">
+          <div class="row">
+            <div class="col-lg-8">
+              <h2 class="outcomes-card-heading">
+                From Monitoring Conditions<br>
+                to Managing Outcomes<br>
+                
+              </h2>
+              <p class="outcomes-card-text">
+                Many platforms focus on dashboards and alerts, leaving teams to
+                interpret what needs to happen next. QubiSense is designed to
+                close this gap. The platform converts live operational data into
+                decisions and executes those decisions through automated
+                workflows. Responses are coordinated across teams and locations,
+                and every action is recorded for audit and accountability.
+              </p>
+            </div>
+            <div class="col-lg-4" style="display: flex; justify-content: center; align-items: center;">
+              <img src="../assets/magnifier.png" alt="" width="450px" style="filter: blur(8px);">
+            </div>
+          </div>
+          
           <p class="outcomes-card-text">
-            Visibility alone does not prevent loss;<br>
-            action does.
-          </p>
-          <button class="btn btn-outcomes" data-testid="visibility-btn">
+          This shift from observation to control has delivered measurable
+          impact. Enterprises using QubiSense have reduced incident
+          response times by approximately 30 percent while eliminating
+          the manual reporting burden that slows down frontline teams.
+          This is how organizations move from reacting to events to
+          staying ahead of them.
+        </p>
+          <button class="btn btn-outcomes" data-testid="visibility-btn" type="button"
+          (click)="scrollToContact()">
             Move beyond visibility
           </button>
         </div>
       </div>
 
-      <div class="col-lg-7 col-md-12">
+      <!-- <div class="col-lg-7 col-md-12">
         <div class="outcomes-content">
           <p class="outcomes-text">
-            Many platforms focus on dashboards and alerts, leaving teams to
-            interpret what needs to happen next. QubiSense is designed to
-            close this gap. The platform converts live operational data into
-            decisions and executes those decisions through automated
-            workflows. Responses are coordinated across teams and locations,
-            and every action is recorded for audit and accountability.
+            
           </p>
 
           <p class="outcomes-text">
-            This shift from observation to control has delivered measurable
-            impact. Enterprises using QubiSense have reduced incident
-            response times by approximately 30 percent while eliminating
-            the manual reporting burden that slows down frontline teams.
-            This is how organizations move from reacting to events to
-            staying ahead of them.
+          
+        </div>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+<!-- add new sections-->
+<!-- control-follows -->
+<section class="control-flow">
+  <div class="container-custom">
+    <div class="row align-items-center control-flow-row">
+      <div class="col-lg-6 col-md-12">
+        <div class="control-flow-left">
+          <h2 class="control-flow-heading">
+            When Intelligence Is<br>
+            Distributed, Control<br>
+            Follows
+          </h2>
+          <button class="btn control-flow-btn" type="button"
+          (click)="scrollToContact()">
+            Strengthen operational control
+          </button>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-12">
+        <div class="control-flow-right">
+          <p class="control-flow-text">
+            Operational control is not about seeing more data. It is about acting sooner, closer to where risk emerges.
+            Distributed AI removes centralized bottlenecks and enables faster, localized decisions across complex
+            operations.
+          </p>
+          <p class="control-flow-text">
+            As organizations scale, delayed decisions compound losses. QubiSense is designed to reduce that delay and
+            restore control where it matters most.
           </p>
         </div>
       </div>
@@ -594,13 +709,384 @@
   </div>
 </section>
 
+<!-- decision latency -->
+<section class="intelligence-section mb-5" data-testid="intelligence-section">
+  <div class="container-custom"
+    style="background: linear-gradient(90deg,  #003D82 50%,#4175A6 100%); border-radius: 30px;">
+    <div class="row " >
+      <div class="col-lg-7 col-md-12" style="background: #003D82; border-radius: 30px;">
+        <div class="intelligence-content p-5">
+          
 
+          <h2 class="intelligence-heading" data-testid="intelligence-heading">
+            Innovation That Removes<br>
+            Decision Latency
+          </h2>
 
-<!-- add new sections-->
+          <p class="intelligence-description">
+            QubiSense innovation focuses on one challenge: 
+            reducing the time between signal, decision, and action. 
+            Traditional systems treat AI as an analytical layer, 
+            QubiSense treats AI as an operational participant.
+          </p>
 
+          <p class="intelligence-description">
+            By distributing intelligence to the edge, 
+            decisions are made in real time using live operational signals. 
+            This approach improves accuracy, reduces dependency on connectivity,
+             and allows operations to adapt continuously to changing conditions.
+          </p>
+          <button class="btn control-flow-btn mt-4" style="background: #6279A1;" type="button"
+          (click)="scrollToContact()">
+            Strengthen operational control
+          </button>
+        </div>
+      </div>
 
+      <div class="col-lg-5 col-md-12">
+        <!-- Server/Database Illustration Placeholder -->
+        <div class="intelligence-illustration-placeholder" data-testid="intelligence-illustration" style="background: none !important;">
+          <div class="placeholder-content">
+            <div class="server-stack">
+              <img src="../assets/e.png" alt="db" width="300">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- desision at scale -->
+<section class="decision-section-scale">
+  <div class="container-custom">
+    <div class="decision-scale-wrap">
+      <h2 class="decision-scale-heading">
+        Designed for Real–Time Decisions at Scale
+      </h2>
 
+      <p class="decision-scale-intro">
+        QubiSense is architected for environments where latency, connectivity gaps, and scale are unavoidable realities.
+        The platform is composed of three tightly integrated layers. At the edge, AI-powered nodes process sensor, video,
+        audio, and language data locally, enabling real-time inference and anomaly detection. These nodes operate
+        independently during network disruptions, ensuring decisions continue uninterrupted.
+      </p>
+
+      <div class="decision-scale-grid">
+        <p class="decision-scale-text">
+          At the intelligence layer, distributed models coordinate insights across nodes, enabling pattern recognition,
+          prediction, and automated response across locations and assets. At the cloud layer, orchestration, analytics,
+          simulation, and enterprise integrations provide visibility, governance, and long-term optimization without
+          becoming a dependency for real-time action.
+        </p>
+
+        <div class="decision-scale-right">
+          <p class="decision-scale-text">
+            This architecture allows enterprises to scale intelligence without centralizing risk, delivering resilience,
+            continuity, and predictable performance across distributed operations.
+          </p>
+
+          <button class="btn decision-scale-btn" type="button" type="button"
+          (click)="scrollToContact()">
+            Understand the architecture
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Built for Operational Reality Section (Above Purpose) -->
+<section class="operational-reality-section mb-5" data-testid="operational-reality-section">
+  <div class="container-custom">
+    <div class="operational-reality-card">
+      <div class="operational-reality-layout">
+        <div class="operational-reality-copy">
+          <h2 class="operational-reality-heading">
+            Built for Operational Reality,<br>
+            Not Ideal Conditions
+          </h2>
+          <p class="operational-reality-text">
+            Operational environments are dynamic and unpredictable. Systems
+            designed for stable conditions fail under real-world pressure.
+            QubiSense is built around operational constraints rather than
+            assumptions. The result is intelligence that performs reliably in
+            motion, at scale, and under uncertainty.
+          </p>
+          <button class="operational-reality-btn" data-testid="operational-reality-btn" type="button"
+          (click)="scrollToContact()">
+            See how it performs
+          </button>
+        </div>
+
+        <div class="operational-reality-visual justify-content-center" aria-hidden="true">
+          <img src="../assets/f.png" alt="" width="300px">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Purpose Section (Above FAQ) -->
+<section class="purpose-section" data-testid="purpose-section">
+  <div class="container-custom">
+    <div class="purpose-inner">
+      <div class="purpose-grid">
+        <div class="purpose-left">
+          <div class="purpose-copy">
+            <p class="purpose-text">
+              QubiSense was founded on a recurring insight: operational
+              failures are rarely caused by missing data, but by decisions that
+              arrive too late. The founding team brings deep experience in
+              distributed systems, applied AI, and large-scale operations. Every
+              design choice reflects a single goal: move intelligence to where
+              work happens and enable earlier action.
+            </p>
+
+            <p class="purpose-text">
+              QubiSense works with enterprises managing complex, high-risk
+              operations where speed, resilience, and compliance matter.
+            </p>
+          </div>
+        </div>
+
+        <div class="purpose-right">
+          <div class="purpose-right-content">
+            <div class="purpose-title-wrap">
+              <h3 class="purpose-title">
+                Built to Solve Delayed Decisions<br>
+              </h3>
+            </div>
+
+            <div class="purpose-cta mt-4">
+              <button class="purpose-btn" type="button"
+              (click)="scrollToContact()" data-testid="purpose-btn">
+                Understand our purpose
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section" data-testid="faq-section">
+  <div class="container-custom">
+    <div class="faq-container">
+      <div class="faq-header">
+        <h2 class="faq-heading">
+          <span class="faq-heading-black">Frequently Asked</span><br>
+          <span class="faq-heading-blue">Questions</span>
+        </h2>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-col" role="list">
+          <div
+            class="faq-card"
+            role="listitem"
+            *ngFor="let item of faqLeftItems; trackBy: trackByFaqId"
+            [class.is-open]="isFaqOpen(item.id)"
+          >
+            <button
+              type="button"
+              class="faq-card-btn"
+              (click)="toggleFaq(item.id)"
+              [attr.aria-expanded]="isFaqOpen(item.id)"
+              [attr.aria-controls]="'faq-panel-' + item.id"
+            >
+              <span class="faq-question">{{ item.question }}</span>
+              <span class="faq-toggle" aria-hidden="true">{{ isFaqOpen(item.id) ? '−' : '+' }}</span>
+            </button>
+
+            <div
+              class="faq-panel"
+              *ngIf="isFaqOpen(item.id)"
+              [id]="'faq-panel-' + item.id"
+              role="region"
+              [attr.aria-label]="item.question"
+            >
+              <p class="faq-answer">{{ item.answer }}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-col" role="list">
+          <div
+            class="faq-card"
+            role="listitem"
+            *ngFor="let item of faqRightItems; trackBy: trackByFaqId"
+            [class.is-open]="isFaqOpen(item.id)"
+          >
+            <button
+              type="button"
+              class="faq-card-btn"
+              (click)="toggleFaq(item.id)"
+              [attr.aria-expanded]="isFaqOpen(item.id)"
+              [attr.aria-controls]="'faq-panel-' + item.id"
+            >
+              <span class="faq-question">{{ item.question }}</span>
+              <span class="faq-toggle" aria-hidden="true">{{ isFaqOpen(item.id) ? '−' : '+' }}</span>
+            </button>
+
+            <div
+              class="faq-panel"
+              *ngIf="isFaqOpen(item.id)"
+              [id]="'faq-panel-' + item.id"
+              role="region"
+              [attr.aria-label]="item.question"
+            >
+              <p class="faq-answer">{{ item.answer }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Conversation Section (Below FAQ) -->
+<section class="conversation-section" data-testid="conversation-section" id="contact-us">
+  <div class="container-custom">
+    <div class="conversation-inner">
+      <div class="row align-items-start">
+        <div class="col-lg-6 col-md-12">
+          <h2 class="conversation-heading">
+            Start With the<br>
+            Right Conversation
+          </h2>
+
+          <p class="conversation-text">
+            Every operation faces different risks and<br>
+            constraints. Effective deployments begin by<br>
+            understanding where decisions slow down and<br>
+            losses occur.
+          </p>
+
+          <p class="conversation-text">
+            If you are exploring how Distributed AI can change<br>
+            operational control, this is the right place to start.
+          </p>
+
+          <div class="conversation-social" aria-label="Social links">
+            <!-- <a
+              class="conversation-social-link"
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M7.75 2C4.57 2 2 4.57 2 7.75v8.5C2 19.43 4.57 22 7.75 22h8.5C19.43 22 22 19.43 22 16.25v-8.5C22 4.57 19.43 2 16.25 2h-8.5zm0 2h8.5C18.22 4 20 5.78 20 7.75v8.5c0 1.97-1.78 3.75-3.75 3.75h-8.5C5.78 20 4 18.22 4 16.25v-8.5C4 5.78 5.78 4 7.75 4zm8.75 1.5a1 1 0 100 2 1 1 0 000-2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"/>
+              </svg>
+            </a>
+
+            <a
+              class="conversation-social-link"
+              href="https://dribbble.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Dribbble"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2a10 10 0 1010 10A10.011 10.011 0 0012 2zm7.93 9.29a15.76 15.76 0 00-6.07-.11c-.13-.31-.27-.62-.42-.93a16.14 16.14 0 005.43-4.2 7.96 7.96 0 011.06 5.24zM17.6 5.1a14.13 14.13 0 01-4.73 3.7A38.7 38.7 0 0010.31 4a7.93 7.93 0 017.29 1.1zM8.65 4.62A36.56 36.56 0 0111.2 9.3a14.97 14.97 0 01-6.36.86 7.98 7.98 0 013.81-5.54zM4.07 12c0-.1 0-.21.01-.31a17 17 0 007.99-1.27c.18.36.34.72.5 1.08a11.98 11.98 0 00-6.35 5.84A7.95 7.95 0 014.07 12zm3.3 6.64a10 10 0 015.74-5.24 26.88 26.88 0 011.63 6.11A7.96 7.96 0 017.37 18.64zM16.59 19.2a28.92 28.92 0 00-1.45-5.53 13.7 13.7 0 015.5.2 7.98 7.98 0 01-4.05 5.33z"/>
+              </svg>
+            </a> -->
+
+            <a
+              class="conversation-social-link"
+              href="https://www.linkedin.com/company/smartaxiom"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+                ></path>
+              </svg>
+            </a>
+
+            <a
+              class="conversation-social-link"
+              href="mailto:info@qubisense.com"
+              aria-label="Email"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="conversation-social-meta" aria-label="Legal links">
+            <span class="conversation-social-meta-item">© 2026 Brand, Inc.</span>
+            <span class="conversation-social-meta-dot" aria-hidden="true">•</span>
+            <a class="conversation-social-meta-link" href="#" aria-label="Privacy">Privacy</a>
+            <span class="conversation-social-meta-dot" aria-hidden="true">•</span>
+            <a class="conversation-social-meta-link" href="#" aria-label="Terms">Terms</a>
+            <span class="conversation-social-meta-dot" aria-hidden="true">•</span>
+            <a class="conversation-social-meta-link" href="#" aria-label="Sitemap">Sitemap</a>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12">
+          <form class="conversation-form" data-testid="conversation-form" novalidate>
+            <div class="conversation-field-wrap">
+              <input
+                class="conversation-field"
+                type="text"
+                placeholder="Enter your Name"
+                aria-label="Enter your Name"
+                autocomplete="name"
+              />
+            </div>
+
+            <div class="conversation-field-wrap">
+              <input
+                class="conversation-field"
+                type="contact"
+                placeholder="Enter your Contact Number"
+                aria-label="Enter your Contact Number"
+                autocomplete="contact"
+              />
+            </div>
+
+            <div class="conversation-field-wrap">
+              <input
+                class="conversation-field"
+                type="email"
+                placeholder="Enter your Business Email ID"
+                aria-label="Enter your Business Email ID (alternate)"
+                autocomplete="email"
+              />
+            </div>
+
+            <div class="conversation-field-wrap">
+              <textarea
+                class="conversation-field conversation-textarea"
+                placeholder="Enter your message here"
+                aria-label="Enter your message here"
+                rows="4"
+              ></textarea>
+            </div>
+
+            <button
+              class="conversation-btn"
+              type="button"
+              data-testid="conversation-btn"
+            >
+              Start the Conversation
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Footer -->
 <footer class="footer" data-testid="footer">
@@ -621,18 +1107,18 @@
           <h4 class="footer-heading">About Neuros</h4>
           <ul class="footer-list">
             <li><a href="#" class="footer-link">Company Overview</a></li>
-            <li><a href="#" class="footer-link">Careers</a></li>
+            <!-- <li><a href="#" class="footer-link">Careers</a></li>
             <li><a href="#" class="footer-link">Press & Media</a></li>
-            <li><a href="#" class="footer-link">Testimonials</a></li>
+            <li><a href="#" class="footer-link">Testimonials</a></li> -->
           </ul>
         </div>
 
         <div class="col-lg-3 col-md-6 col-sm-6">
           <h4 class="footer-heading">Resources</h4>
           <ul class="footer-list">
-            <li><a href="#" class="footer-link">Blog</a></li>
+            <!-- <li><a href="#" class="footer-link">Blog</a></li>
             <li><a href="#" class="footer-link">Help Center</a></li>
-            <li><a href="#" class="footer-link">Webinars & Events</a></li>
+            <li><a href="#" class="footer-link">Webinars & Events</a></li> -->
             <li><a href="#" class="footer-link">Case Studies</a></li>
           </ul>
         </div>
@@ -641,35 +1127,16 @@
           <h4 class="footer-heading">Support & Contact</h4>
           <ul class="footer-list">
             <li><a href="#" class="footer-link">Contact Us</a></li>
-            <li><a href="#" class="footer-link">Technical Support</a></li>
+            <!-- <li><a href="#" class="footer-link">Technical Support</a></li>
             <li><a href="#" class="footer-link">Feedback</a></li>
-            <li><a href="#" class="footer-link">Community Forum</a></li>
+            <li><a href="#" class="footer-link">Community Forum</a></li> -->
           </ul>
         </div>
 
         <div class="col-lg-3 col-md-6 col-sm-6">
           <h4 class="footer-heading">Connect</h4>
           <ul class="footer-list">
-            <li><a href="https://www.instagram.com/" class="footer-link">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M7.75 2C4.57 2 2 4.57 2 7.75v8.5C2 19.43 4.57 22 7.75 22h8.5C19.43 22 22 19.43 22 16.25v-8.5C22 4.57 19.43 2 16.25 2h-8.5zm0 2h8.5C18.22 4 20 5.78 20 7.75v8.5c0 1.97-1.78 3.75-3.75 3.75h-8.5C5.78 20 4 18.22 4 16.25v-8.5C4 5.78 5.78 4 7.75 4zm8.75 1.5a1 1 0 100 2 1 1 0 000-2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"/>
-              </svg>
-                Instagram
-              </a></li>
-            <li><a href="#" class="footer-link">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                  <path
-                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
-                </svg>
-                Facebook
-              </a></li>
-            <li><a href="#" class="footer-link">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                  <path
-                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
-                </svg>
-                Twitter / X
-              </a></li>
+            
             <li><a href="https://www.linkedin.com/company/smartaxiom" class="footer-link">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
                   <path
