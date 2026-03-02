@@ -1022,12 +1022,12 @@
               <small class="text-danger" *ngIf="f['name'].touched && f['name'].errors?.['required']">
                 Name is required
               </small>
-            
-              <small class="text-danger" *ngIf="f.name.errors?.minlength">
+              
+              <small class="text-danger" *ngIf="f['name'].errors?.['minlength']">
                 Minimum 3 characters required
               </small>
-            
-              <small class="text-danger" *ngIf="f.name.errors?.pattern">
+              
+              <small class="text-danger" *ngIf="f['name'].errors?.['pattern']">
                 Only letters allowed
               </small>
             </div>
@@ -1035,11 +1035,11 @@
             <div class="conversation-field-wrap">
               <input class="conversation-field" type="text" placeholder="Enter your Contact Number" formControlName="contact" />
             
-              <small class="text-danger" *ngIf="f.contact.touched && f.contact.errors?.required">
+              <small class="text-danger" *ngIf="f['contact'].touched && f['contact'].errors?.['required']">
                 Contact number is required
               </small>
-            
-              <small class="text-danger" *ngIf="f.contact.errors?.pattern">
+              
+              <small class="text-danger" *ngIf="f['contact'].errors?.['pattern']">
                 Enter valid 10 digit number
               </small>
             </div>
@@ -1047,11 +1047,11 @@
             <div class="conversation-field-wrap">
               <input class="conversation-field" type="email" placeholder="Enter your Business Email ID" formControlName="email" />
             
-              <small class="text-danger" *ngIf="f.email.touched && f.email.errors?.required">
+              <small class="text-danger" *ngIf="f['email'].touched && f['email'].errors?.['required']">
                 Email is required
               </small>
-            
-              <small class="text-danger" *ngIf="f.email.errors?.email">
+              
+              <small class="text-danger" *ngIf="f['email'].errors?.['email']">
                 Enter valid email address
               </small>
             </div>
@@ -1061,11 +1061,11 @@
                 formControlName="message">
               </textarea>
             
-              <small class="text-danger" *ngIf="f.message.touched && f.message.errors?.required">
+              <small class="text-danger" *ngIf="f['message'].touched && f['message'].errors?.['required']">
                 Message is required
               </small>
-            
-              <small class="text-danger" *ngIf="f.message.errors?.minlength">
+              
+              <small class="text-danger" *ngIf="f['message'].errors?.['minlength']">
                 Minimum 10 characters required
               </small>
             </div>
