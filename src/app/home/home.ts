@@ -1,10 +1,12 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { environment } from '../../environment';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule,ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, HttpClientModule],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })
@@ -16,8 +18,9 @@ export class HomeComponent {
   selectedIndustry = 'logistics';
   conversationForm!: FormGroup;
   isSubmitted: boolean = false;
+  //http: any;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private http: HttpClient) { }
 
   ngOnInit() {
     this.conversationForm = this.fb.nonNullable.group({
@@ -31,7 +34,25 @@ export class HomeComponent {
     return this.conversationForm.controls;
   }
 
+  onSubmit() {
+    if (this.conversationForm.invalid) {
+      this.conversationForm.markAllAsTouched();
+      return;
+    }
 
+    const formData = this.conversationForm.value;
+    this.http.post(`${environment.apiUrl}/send-mail`, formData)
+      .subscribe({
+        next: (res: any) => {
+          console.log('Mail Sent Successfully');
+          this.conversationForm.reset();
+          this.isSubmitted = true;
+        },
+        error: (err: any) => {
+          console.error('Mail Error:', err);
+        }
+      });
+  }
  
 
   industries: any = {
@@ -119,7 +140,6 @@ export class HomeComponent {
 delivering the competitive edge required in modern supply chains`,
       buttonText: 'Reclaim control over downtime'
     },
-
     // is done text
     logistics: {
       title: 'Increase Fleet Uptime Before Breakdowns Disrupt Deliveries ',
@@ -147,10 +167,8 @@ delivering the competitive edge required in modern supply chains`,
       footnote1: `For organizations evaluating how Distributed AI can stabilize fleet operations at scale, the opportunity lies in identifying where unplanned downtime originates and preventing it before it spreads.`,
       buttonText: 'Strengthen fleet reliability at scale'
     },
-
-
     utilities: {
-      title: '          ut      Extend Cold Chain Shelf Life Before Spoilage Impacts Revenue',
+      title: 'Extend Cold Chain Shelf Life Before Spoilage Impacts Revenue',
       lead: `In cold chain logistics, temperature deviations can damage goods...`,
       subtitle: 'From Temperature Monitoring to Shelf-Life Intelligence',
       paragraph: `Traditional cold chain monitoring systems alert teams after temperature thresholds are breached...`,
@@ -175,8 +193,6 @@ delivering the competitive edge required in modern supply chains`,
 delivering the competitive edge required in modern supply chains`,
       buttonText: 'Protect product integrity and revenue'
     },
-
-
 // is done text
     healthcare: {
       title: ' Extend Cold Chain Shelf Life Before Spoilage Impacts Revenue',
@@ -205,8 +221,6 @@ Using ruggedized trackers equipped with ±0.5°C precision sensors, the platform
 delivering the competitive edge required in modern supply chains`,
       buttonText: 'Protect product integrity and revenue'
     },
-
-
 // is done
     emergency: {
       title: ' Accelerate Life-Saving Decisions Before Minutes Become Consequences ',
@@ -247,7 +261,6 @@ Reduced verbal repetition and miscommunication during transfer `,
       footnote1: `Incident coordination shifts from reactive communication to orchestrated alignment. Distributed AI does not replace clinical judgment. It accelerates collaboration, strengthens signal clarity, and ensures that frontline insights reach decision-makers without delay. For public safety and healthcare leaders evaluating operational resilience, the opportunity lies in asking a simple question: how much faster could critical teams align if intelligence operated directly within the response environment? `,
       buttonText: 'Strengthen response when every second matters'
     }
-
 
   };
 
@@ -387,21 +400,6 @@ Reduced verbal repetition and miscommunication during transfer `,
 
 
 
-  onSubmit() {
-    if (this.conversationForm.valid) {
-      console.log(this.conversationForm.value); 
 
-      const formData = this.conversationForm.value;
-      console.log(formData.name);
-      console.log(formData.contact);
-      console.log(formData.email);
-      console.log(formData.message);
-
-      this.conversationForm.reset();
-      this.isSubmitted=true
-    } else {
-      console.log('Form Invalid');
-    }
-  }
 
 }
