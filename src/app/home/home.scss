@@ -694,7 +694,7 @@
 .architecture-section {
   padding: 80px 0;
   color: white;
-  background-image: url('../assets/backgroung.png');
+  background-image: url('../assets/qbbg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -857,12 +857,19 @@
 }
 
 .industry-card {
+
   background: linear-gradient(135deg, #4A9FD8 0%, #0050B3 100%);
   color: white;
   padding: 32px;
   border-radius: 12px;
   margin-bottom: 20px;
   transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+  position: relative;
+  padding: 40px 30px 60px;
+    /* bottom padding extra */
 
   &:hover {
     transform: translateY(-4px);
@@ -893,6 +900,34 @@
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.95);
   margin: 0;
+}
+.industry-card-button-wrapper {
+  position: absolute;
+  bottom: -20px;
+  /* card ke bahar niklega */
+  left: 20%;
+  transform: translateX(-50%);
+  margin: 0;
+  /* remove margin-top */
+  padding: 0;
+}
+
+.industry-card-btn {
+  background: #ffffff;
+  color: #2c4c7c;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 50px;
+  /* pill shape */
+  font-weight: 500;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.industry-card-btn:hover {
+  background: #f1f1f1;
+  transform: translateY(-2px);
 }
 
 /* ========================================
@@ -1966,6 +2001,18 @@
   .purpose-title {
     font-size: 54px;
   }
+  .col-lg-4 img{
+    width: 350px !important;
+  }
+    .intelligence-illustration-placeholder{
+      
+      margin: 0 0px !important;
+    }
+        .gear-warning {
+          color: rgb(11, 5, 70);
+          font-size: 50px;
+          padding: 20px 0px;
+        }
 }
 
 /* Mobile (<768px) */
@@ -2125,8 +2172,8 @@
 
   .architecture-illustration-placeholder {
     min-height: 300px;
-    padding: 40px 20px;
-    margin-top: 32px;
+    padding: 5px 5px;
+    margin-top: 0px;
   }
 
   /* Industries Section */
@@ -2148,7 +2195,7 @@
   }
 
   .industry-card {
-    margin-bottom: 16px;
+    margin-bottom: 30px !important;
   }
 
   /* Outcomes Section */
@@ -2213,6 +2260,7 @@
   .operational-reality-layout {
     grid-template-columns: 1.2fr 1fr;
     column-gap: 32px;
+    display: contents !important;
   }
 
   .operational-reality-heading {
@@ -2226,6 +2274,14 @@
   .operational-reality-visual-inner {
     width: 220px;
   }
+  .operational-reality-btn{
+    width: 100%;
+    font-size: 12px;
+  }
+    .control-flow-btn {
+      padding: 10px 33px !important;
+    }
+
 
   /* Purpose Section */
   .purpose-section {
@@ -2248,13 +2304,21 @@
 
   .purpose-title {
     font-size: 40px;
-    margin-bottom: 22px;
+    margin-bottom: 0px !important;
+    text-align: center !important;
+    padding: 0 0 0px 0 !important;
   }
 
   .purpose-btn {
     width: 100%;
     min-width: 0;
   }
+  .responsive-padding{
+    padding: 1rem !important;
+  }
+    .control-flow{
+      padding: 10px 0;
+    }
   /* FAQ */
   .faq-section {
     padding: 50px 0;
@@ -2341,12 +2405,7 @@
     justify-content: center;
     text-align: center;
   }
-  .operational-reality-layout[_ngcontent-ng-c3806231677] {
-    display: contents !important; 
-  }
-  .operational-reality-btn[_ngcontent-ng-c3806231677] {    
-    width: 100%;
-  }
+  
 }
 @media (max-width: 560px) {
   .gear-warning img {
@@ -2423,4 +2482,17 @@
   .btn-cta-secondary {
     font-size: 12px !important;
   }
+}
+
+
+.thank-you-box {
+  text-align: center;
+  padding: 40px;
+  background: #f5f7ff;
+  border-radius: 12px;
+}
+
+.thank-you-box h2 {
+  margin-bottom: 15px;
+  color: #2e3a8c;
 }
